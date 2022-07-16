@@ -1,44 +1,37 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Home from './Componets/Home';
+import GetArt from './Componets/GetArt';
+import GetArtist from './Componets/Get.Artist';
+import { Routes, Route, Link } from 'react-router-dom'
 
 
 function App() {
-  const [ art, setArt] = useState([])
-  
-
-  const getArt = function () {
-   
-const url = `https://api.artsy.net/api/artworks?total_count=`
-
-
-    fetch(url,{ headers:{"X-XAPP-Token":process.env.REACT_APP_KEY} } )
-      .then((res) => {
-        // parse JSON string into an actual JS object
-        return res.json()
-      })
-      .then((data) => {
-        // once we have the object, do stuff
-        console.log('success!', data)
-        setArt(data._embedded.artworks)
-        console.log(art)
-        
-      
-        
-      })
-      .catch((err) => {
-        console.log('something went wrong...', err)
-      })
-  }
+ 
   return(
     <>
-      <h1>Hello World</h1>
-      <button onClick={getArt}>Get Art!</button>
-      
-   
-     
-  
+    <nav>
+    <Link to="/">
+      <h1>Home</h1>
+    </Link>
+    <Link to='/Explore-Artworks'>
+      <h1>Explore Artworks</h1>
+    </Link>
+    <Link to='/Explore-Artists'>
+      <h1>Explore Artists</h1>
+    </Link>
+    </nav>
+    <main>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path="/Explore-Artworks" element={<GetArt/>}/>
+        <Route path='/Explore-Artists' element={<GetArtist />}/>
+      </Routes>
+    </main>
 
+    
+     
     </>
       
   
