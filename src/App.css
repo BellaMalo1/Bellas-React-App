@@ -2,17 +2,19 @@
 .nav-bar {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-decoration: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  
-
+  display: flex;
+  justify-content:space-around;
 }
 .link1{
   color: black;
+
+
 }
 .link2{
   color: black;
+  grid-column: 2;
 }
 .link3{
   color: black;
+  grid-column: 3;
 }
