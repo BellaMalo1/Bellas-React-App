@@ -1,7 +1,30 @@
+import { useState } from 'react'
 function GetArtist (){
+    const [ artist, setArtist ] = useState([])
+
+    const url = `https://api.artsy.net/api/artists/{id}`
+        
+    fetch(url,{ headers:{"X-XAPP-Token":process.env.REACT_APP_KEY} } )
+       .then((res) => {
+         return res.json()
+       })
+       .then((data) => {
+         console.log('success!', data)
+    })
+       .catch((err) => {
+         console.log('something went wrong...', err)
+       })
     return(
         <>
-        <h1>Get Artist Component</h1>
+        <form className='getArtist'>
+            <input
+                placeholder='Search'
+                type='text'
+                name='searchString'/>
+            <button type='submit'>Search Artist</button>
+        </form>
+ 
+       
         </>
     )
 }
