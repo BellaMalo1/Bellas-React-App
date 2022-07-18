@@ -11,14 +11,14 @@ function App() {
  
   return(
     <>
-    <nav>
-    <Link to="/">
+    <nav className="nav-bar">
+    <Link className='link1' to="/">
       <h1>Home</h1>
     </Link>
-    <Link to='/Explore-Artworks'>
+    <Link className='link2'to='/Explore-Artworks'>
       <h1>Explore Artworks</h1>
     </Link>
-    <Link to='/Explore-Artists'>
+    <Link className='link3'to='/Explore-Artists'>
       <h1>Explore Artists</h1>
     </Link>
     </nav>
