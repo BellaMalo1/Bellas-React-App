@@ -1,11 +1,12 @@
 
 import { useState, useEffect } from 'react'
+import Carousel from 'react-bootstrap/Carousel';
   
 function GetArt () {
     const [ art, setArt] = useState([])
    
-    const url = `https://api.artsy.net/api/artworks/`
-       
+    const url = `https://api.artsy.net/api/artworks`
+
     useEffect(() => {
       fetch(url,{ headers:{"X-XAPP-Token":process.env.REACT_APP_KEY} } )
        .then((res) => {
@@ -15,7 +16,6 @@ function GetArt () {
        .then((data) => {
         
          console.log('success!', data)
-        //  setArt(data._embedded.artworks[2]._links.thumbnail.href)
         setArt(data._embedded.artworks)
 
     })
@@ -36,21 +36,44 @@ function GetArt () {
   }
   
     
+// return (
+//     <div className='Art-gallery'>
+//     <h1>You're in Get Art!</h1>
+   
+// {art.length > 0 && art.map(artworks => (
+//     <div key={artworks.id} className='Gallery'>
+//         <img src={artworks._links.thumbnail.href} alt={artworks._links.artists.href} /> 
+//      </div>
+// ))}
+//     </div>
+// )
+// }
+
+
+
+
 return (
-    <div className='Art-gallery'>
-    <h1>You're in Get Art!</h1>
-    <img src={art} alt="painting"/> 
-  
-{art.length > 0 && art.map(artworks => (
-    <div key={artworks.thumbnail} className='Gallery'>
-        <img src={artworks._links.thumbnail.href} alt={artworks._links.artists.href} /> 
-     </div>
-))}
+  <Carousel style={{ minHeight: '90vh' }}>
+    {art.length > 0 && art.map(artworks => {
+      return (
+        <Carousel.Item key={artworks.id} style={{ maxHeight: '90vh' }}>
+          <img
+            className='d-block w-100'
+            style={{
+              height: '90vh',
+              width: '100%',
+              objectFit: 'cover',
+              overflow: 'hidden',
+            }}
+            src={artworks._links.thumbnail.href}
+            alt={artworks._links.artists.href}
+          />
+        </Carousel.Item>
+      );
+    })}
+  </Carousel>
+);
+  }
 
 
-
-    
-    </div>
-)
-}
 export default GetArt
