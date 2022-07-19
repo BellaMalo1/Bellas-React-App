@@ -51,6 +51,10 @@ return (
             src={artworks._links.thumbnail.href}
             alt={artworks._links.artists.href}
           />
+          <Carousel.Caption>
+          <p>{artworks.title}</p>
+            <p>{artworks.medium}</p>
+          </Carousel.Caption>
         </Carousel.Item>
       );
     })}

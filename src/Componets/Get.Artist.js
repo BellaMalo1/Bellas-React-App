@@ -42,8 +42,8 @@ function GetArtist (){
            <button type='submit'>Search Artist</button>
         </form>
         <section>{artist.biography}</section>
-        <p>Birthday:{artist.birthday}</p>
-        <p>Hometown:{artist.hometown}</p>
+        {/* <p>{artist.birthday}</p>
+        <p>{artist.hometown}</p> */}
         
        
  
