@@ -10,6 +10,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 
 
 function App() {
+
  
   return(
     <>
@@ -28,7 +29,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path="/Explore-Artworks" element={<GetArt/>}/>
-        <Route path='/Explore-Artists' element={<GetArtist />}/>
+        <Route path='/Explore-Artists' element={<GetArtist/>}/>
       </Routes>
     </main>
 

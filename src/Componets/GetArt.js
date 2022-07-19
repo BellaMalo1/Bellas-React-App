@@ -15,7 +15,7 @@ function GetArt () {
        })
        .then((data) => {
         
-         console.log('success!', data)
+         console.log('You have Art Work!', data)
         setArt(data._embedded.artworks)
 
     })
@@ -35,23 +35,6 @@ function GetArt () {
     return null
   }
   
-    
-// return (
-//     <div className='Art-gallery'>
-//     <h1>You're in Get Art!</h1>
-   
-// {art.length > 0 && art.map(artworks => (
-//     <div key={artworks.id} className='Gallery'>
-//         <img src={artworks._links.thumbnail.href} alt={artworks._links.artists.href} /> 
-//      </div>
-// ))}
-//     </div>
-// )
-// }
-
-
-
-
 return (
   <Carousel style={{ minHeight: '90vh' }}>
     {art.length > 0 && art.map(artworks => {
