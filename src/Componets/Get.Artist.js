@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 
-
-
 function GetArtist (){
     const [ artist, setArtist ] = useState([])
     const[searchString, setSearchString] = useState('')
@@ -42,8 +40,8 @@ function GetArtist (){
            <button type='submit'>Search Artist</button>
         </form>
         <section>{artist.biography}</section>
-        {/* <p>{artist.birthday}</p>
-        <p>{artist.hometown}</p> */}
+        <p>{artist.birthday}</p>
+        <p>{artist.hometown}</p>
         
        
  
