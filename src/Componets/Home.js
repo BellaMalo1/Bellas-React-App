@@ -1,11 +1,9 @@
-
-
-
+import home from './Home.css'
 function Home (){
     return(
-        <>
-        <h1> Welcome to the home Component</h1>
-        </>
+    <head className='Welcome-container'>
+        <h1 className='welcome-text'>Welcome to Art Crawl</h1>
+    </head>
     )
 
 }

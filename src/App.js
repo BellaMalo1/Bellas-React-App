@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './Componets/Home';
 import GetArt from './Componets/GetArt';
-import GetArtist from './Componets/Get.Artist';
+import GetArtist from './Componets/GetArtist';
 import { Routes, Route, Link } from 'react-router-dom'
 
 
@@ -19,7 +19,7 @@ function App() {
       <h1>Home</h1>
     </Link>
     <Link className='link2'to='/Explore-Artworks'>
-      <h1>Explore Artworks</h1>
+      <h1>Gallery</h1>
     </Link>
     <Link className='link3'to='/Explore-Artists'>
       <h1>Explore Artists</h1>
