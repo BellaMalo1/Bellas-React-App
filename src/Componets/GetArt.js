@@ -4,7 +4,6 @@ import Carousel from 'react-bootstrap/Carousel';
   
 function GetArt () {
     const [ art, setArt] = useState([])
-    let newURl 
    
     const url = `https://api.artsy.net/api/artworks`
 
@@ -16,9 +15,8 @@ function GetArt () {
        })
        .then((data) => {
         
-         console.log('You have Art Work!', data)
+         console.log('Carousel Art', data)
         setArt(data._embedded.artworks)
-        
         
 
     })
@@ -37,13 +35,7 @@ function GetArt () {
   if(art.length === 0) {
     return null
   }
-
-  if(art.length > 0 ){
-    newURl = art[0]._links.image.href
-    newURl = newURl.replace('{image_version}', 'large')
-    console.log(newURl)
-  }
-  
+ 
 return (
   <Carousel style={{ minHeight: '90vh' }}>
     {art.length > 0 && art.map(artworks => {
@@ -57,8 +49,7 @@ return (
               objectFit: 'cover',
               overflow: 'hidden',
             }}
-            src={artworks._links.thumbnail.href}
-            // src={artworks._links.image.href, large)}
+            src={artworks._links.image.href.replace('{image_version}', 'large')}
             alt={artworks._links.artists.href}
           />
           <Carousel.Caption>

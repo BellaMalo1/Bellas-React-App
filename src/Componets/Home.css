@@ -1,0 +1,14 @@
+.Welcome-container{
+    font-family:'Times New Roman', Times, serif;
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+
+}
+.welcome-text{
+    color:aquamarine;
+    background-color: black;
+    grid-column: 1/span 3;
+    grid-row: 1/span 3;  
+
+}

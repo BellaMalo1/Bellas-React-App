@@ -43,6 +43,7 @@ function GetArtist (){
         <p>{artist.birthday}</p>
         <p>{artist.hometown}</p>
         
+        
        
  
        
