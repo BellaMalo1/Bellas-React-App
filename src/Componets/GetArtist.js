@@ -3,16 +3,18 @@ import { useEffect, useState } from 'react'
 
 
 function GetArtist (){
-    const [ artist, setArtist ] = useState([])
+    const [ artist, setArtist ] = useState()
     const[searchString, setSearchString] = useState('')
 
     function handleChange(event){
       setSearchString(event.target.value)
     }
-    
+  
 function handleSubmit(event) {
       event.preventDefault();
       console.log(event.target.value)
+     
+
   
       fetch(url,{ headers:{"X-XAPP-Token":process.env.REACT_APP_KEY} } )
             .then((res) => {
@@ -27,11 +29,11 @@ function handleSubmit(event) {
         })
     }
 
-    const url = `https://api.artsy.net/api/artists/${searchString}`
+    const url = `https://api.artsy.net/api/artists/${searchString.replace(' ', '-')}`
 
     useEffect(() => {
       console.log(artist)
-       },[])
+       },[artist])
     return(
         <>
         
@@ -44,11 +46,13 @@ function handleSubmit(event) {
                 onChange={handleChange}
                 value={searchString}
                 />
-           <button type='submit'>Search Artist</button>
+           <button  type='submit'>Search Artist</button>
         </form>
+        { artist ? (
         <main className="container">
           <div className='card'>
-              {/* <div className='card-image'><img src={artist._links.image.href.replace('{image_version}', 'large')} alt={artist.name}/></div> */}
+              <div className='card-image'>
+                <img src={artist._links.image.href.replace('{image_version}', 'large')} alt={artist.name}/></div>
               <div className="card-info">
                 <p>{artist.biography}</p>
               </div>
@@ -62,6 +66,7 @@ function handleSubmit(event) {
               </div>
           </div>
         </main>
+        ) : null }
       
 
       
