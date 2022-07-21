@@ -47,7 +47,7 @@ function GetArtist (){
               <div className="card-info">
                 <p>{artist.biography}</p>
               </div>
-                <img src={artist._links.thumbnail.href} alt={artist.name}/>
+                <img src={artist._links.image.href.replace('{image_version}', 'large')} alt={artist.name}/>
               <div className="card-info">
                 <p>Hometown:{artist.hometown}</p>
                 <span></span>
