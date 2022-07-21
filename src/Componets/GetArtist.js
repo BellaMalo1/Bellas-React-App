@@ -10,24 +10,28 @@ function GetArtist (){
       setSearchString(event.target.value)
     }
     
-    function handleSubmit(event) {
+function handleSubmit(event) {
       event.preventDefault();
       console.log(event.target.value)
-
+  
       fetch(url,{ headers:{"X-XAPP-Token":process.env.REACT_APP_KEY} } )
-        .then((res) => {
+            .then((res) => {
           return res.json()
         })
-        .then((data) => {
+            .then((data) => {
           console.log('You have artists!', data)
-          setArtist(data)
-          
+          setArtist(data) 
      })
-        .catch((err) => {
+            .catch((err) => {
           console.log('something went wrong...', err)
         })
     }
+
     const url = `https://api.artsy.net/api/artists/${searchString}`
+
+    useEffect(() => {
+      console.log(artist)
+       },[])
     return(
         <>
         
@@ -44,7 +48,7 @@ function GetArtist (){
         </form>
         <main className="container">
           <div className='card'>
-              <div className='card-image'><img src={artist._links.image.href.replace('{image_version}', 'large')} alt={artist.name}/></div>
+              {/* <div className='card-image'><img src={artist._links.image.href.replace('{image_version}', 'large')} alt={artist.name}/></div> */}
               <div className="card-info">
                 <p>{artist.biography}</p>
               </div>
