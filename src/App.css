@@ -1,5 +1,6 @@
-
-
+*{
+  
+}
 .nav-bar {
   font-family:'Times New Roman', Times, serif;
   text-decoration: none;
@@ -8,8 +9,6 @@
 }
 .link1{
   color: black;
-
-
 }
 .link2{
   color: black;
@@ -19,3 +18,7 @@
   color: black;
   grid-column: 3;
 }
+.link1:hover, .link2:hover, .link3:hover{
+  color: #583029;
+}
+

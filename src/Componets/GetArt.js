@@ -54,7 +54,7 @@ return (
           />
           <Carousel.Caption>
           <p>{artworks.title}</p>
-            <p>{artworks.medium}</p>
+          <p>{artworks.medium}</p>
           </Carousel.Caption>
         </Carousel.Item>
       );

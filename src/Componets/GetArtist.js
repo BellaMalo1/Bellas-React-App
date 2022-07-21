@@ -1,4 +1,6 @@
+import getartist from './GetArtist.css'
 import { useEffect, useState } from 'react'
+
 
 function GetArtist (){
     const [ artist, setArtist ] = useState([])
@@ -28,6 +30,7 @@ function GetArtist (){
     const url = `https://api.artsy.net/api/artists/${searchString}`
     return(
         <>
+        
         <form className='form-horizontal' onSubmit={handleSubmit}   >
             <input 
                 placeholder='Search' 
@@ -39,13 +42,25 @@ function GetArtist (){
                 />
            <button type='submit'>Search Artist</button>
         </form>
-        <section>{artist.biography}</section>
-        <p>{artist.birthday}</p>
-        <p>{artist.hometown}</p>
-        
-        
-       
- 
+        <main className="container">
+          <div className='card'>
+              <div className="card-info">
+                <p>{artist.biography}</p>
+              </div>
+                <img src={artist._links.thumbnail.href} alt={artist.name}/>
+              <div className="card-info">
+                <p>Hometown:{artist.hometown}</p>
+                <span></span>
+                <p>Birthday:{artist.birthday}</p>
+              </div>
+              <div className='card-title'>
+                <h3>{searchString}</h3>
+              </div>
+          </div>
+        </main>
+      
+
+      
        
         </>
     )
