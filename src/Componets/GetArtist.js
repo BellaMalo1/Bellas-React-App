@@ -44,10 +44,10 @@ function GetArtist (){
         </form>
         <main className="container">
           <div className='card'>
+              <div className='card-image'><img src={artist._links.image.href.replace('{image_version}', 'large')} alt={artist.name}/></div>
               <div className="card-info">
                 <p>{artist.biography}</p>
               </div>
-                <img src={artist._links.image.href.replace('{image_version}', 'large')} alt={artist.name}/>
               <div className="card-info">
                 <p>Hometown:{artist.hometown}</p>
                 <span></span>

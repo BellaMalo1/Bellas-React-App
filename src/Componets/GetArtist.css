@@ -27,6 +27,11 @@
     
     border: solid;
   }
+  .card-image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
   .card-info {
     align-items: center;
     display: flex;
