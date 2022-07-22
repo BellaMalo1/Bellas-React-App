@@ -1,70 +1,36 @@
-# Getting Started with Create React App
+Project 2 
+Description: 
+- My application will display a variety of different art pieces by calling on a third party application programming Interface (API) and exhibiting them to the viewer.
+- The viewer will be allowed to search by artists and art movements to draw art of their liking.
+- Stretch goal: the viewer will be able to select pieces that they like and curate their own exhibit to display with space to speak to the themes of their hand picked works.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+technologies used:
+- react 
+- api (artsy)
+- css 
 
-## Available Scripts
+User instruction:
+- visit website : https://art-crawl.netlify.app/
+- visit git reposity: https://github.com/BellaMalo1/Bellas-React-App
+    - fork and clone repo
+    - run npm install 
+    - check into dev branch
 
-In the project directory, you can run:
+User Stories:
+- As a user I want to be able to view a variety of different art pieces 
+- As a user I want the app to be user friendly and easy to use 
+- As an Art lover, I want to explore pieces I’m interested in 
+- As a potential employer I want to see a strong understanding of React and API implementation 
 
-### `npm start`
+API 
+- https://developers.artsy.net/docs 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Visual Component Hierarchy 
+- Components 
+    - Home: displays home page with info
+    - About: instructions and background for creating the app
+    - Explore: gives user change to search art works
+    - Curate: gives user ability to curate their own exhibit based on works they have selected.
+Wireframe 
+- ![](https://file%2B.vscode-resource.vscode-cdn.net/var/folders/n7/f9wmg5256kx1qc2l40kl88zh0000gn/T/TemporaryItems/NSIRD_screencaptureui_i0WKu3/Screen%20Shot%202022-07-21%20at%2010.06.17%20PM.png?version%3D1658466384552)
+- ![](https://file%2B.vscode-resource.vscode-cdn.net/Users/bellamaldonado/.Trash/Screen%20Shot%202022-07-14%20at%2010.37.00%20PM.png?version%3D1658466241127)

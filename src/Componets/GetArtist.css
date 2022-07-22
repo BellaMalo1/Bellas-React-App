@@ -46,3 +46,16 @@
     text-align: center;
     
   }
+  @media(min-width: 600px){
+   
+    body{
+        font-size: 2rem;
+    }
+
+}
+@media(min-width: 800px){
+    body{
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+}

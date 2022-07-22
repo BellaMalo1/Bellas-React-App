@@ -6,6 +6,7 @@
   text-decoration: none;
   display: flex;
   justify-content:space-around;
+  font-size:x-large;
 
 }
 .link1{
@@ -20,6 +21,9 @@
   grid-column: 3;
 }
 .link1:hover, .link2:hover, .link3:hover{
-  color: #583029;
+  color: #023910;
 }
+
+
+
 
