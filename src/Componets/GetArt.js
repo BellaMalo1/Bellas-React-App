@@ -15,7 +15,7 @@ function GetArt () {
        })
        .then((data) => {
         
-         console.log('Carousel Art', data)
+         
         setArt(data._embedded.artworks)
         
 
@@ -29,7 +29,7 @@ function GetArt () {
     },[])
 
     useEffect(() => {
-   console.log(art[0])
+   
     },[art])
    
   if(art.length === 0) {

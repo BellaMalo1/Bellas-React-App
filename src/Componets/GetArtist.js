@@ -1,5 +1,6 @@
 import getartist from './GetArtist.css'
 import { useEffect, useState } from 'react'
+import Home from './Home'
 
 
 function GetArtist (){
@@ -12,31 +13,31 @@ function GetArtist (){
   
 function handleSubmit(event) {
       event.preventDefault();
-      console.log(event.target.value)
-     
-
-  
       fetch(url,{ headers:{"X-XAPP-Token":process.env.REACT_APP_KEY} } )
             .then((res) => {
           return res.json()
         })
             .then((data) => {
-          console.log('You have artists!', data)
+          
           setArtist(data) 
      })
             .catch((err) => {
           console.log('something went wrong...', err)
         })
+   
+      
     }
 
     const url = `https://api.artsy.net/api/artists/${searchString.replace(' ', '-')}`
 
     useEffect(() => {
-      console.log(artist)
+    
        },[artist])
+       useEffect(() => {
+    
+      },[searchString])
     return(
         <>
-        
         <form className='form-horizontal' onSubmit={handleSubmit}   >
             <input 
                 placeholder='Search' 
@@ -52,7 +53,8 @@ function handleSubmit(event) {
         <main className="container">
           <div className='card'>
               <div className='card-image'>
-                <img src={artist._links.image.href.replace('{image_version}', 'large')} alt={artist.name}/></div>
+                <img src={artist._links.image.href.replace('{image_version}', 'large')} alt={artist.name}/>
+                </div>
               <div className="card-info">
                 <p>{artist.biography}</p>
               </div>
@@ -66,9 +68,9 @@ function handleSubmit(event) {
               </div>
           </div>
         </main>
-        ) : null }
+        ) : null}
       
-
+     
       
        
         </>

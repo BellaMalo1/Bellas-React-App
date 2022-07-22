@@ -1,7 +1,27 @@
 .Welcome-container{
     font-family:'Times New Roman', Times, serif;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    
+    
+}
+.welcome-message{
+    font-family:'Times New Roman', Times, serif;
+    grid-row: 2 ;
+    grid-column: 2 /span 3;
+ 
+    
+}
+.info-message{
+font-family:'Times New Roman', Times, serif;
+color: #820182;
+grid-row:3;
+grid-column: 1 /span 3;
+
+
+
+ 
 
 
 }
